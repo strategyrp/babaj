@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.lemoncityrp.it/database by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2023 23:23:31 GMT -->
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>LemonCity | Database</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/icon-logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script src="../kit.fontawesome.com/2b98d1dd1f.js" crossorigin="anonymous"></script>        
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script type="text/javascript">
+    var ALERT_TITLE = "ATTENZIONE";
+var ALERT_BUTTON_TEXT = "Ok";
+var ALERT_BUTTON_DISCORD = "Discord";
+
+if(document.getElementById) {
+    window.alert = function(txt) {
+        createCustomAlert(txt);
+    }
+}
+
+function createCustomAlert(txt) {
+    d = document;
+
+    if(d.getElementById("modalContainer")) return;
+
+    mObj = d.getElementsByTagName("body")[0].appendChild(d.createElement("div"));
+    mObj.id = "modalContainer";
+    mObj.style.height = d.documentElement.scrollHeight + "px";
+
+    alertObj = mObj.appendChild(d.createElement("div"));
+    alertObj.id = "alertBox";
+    if(d.all && !window.opera) alertObj.style.top = document.documentElement.scrollTop + "px";
+    alertObj.style.left = (d.documentElement.scrollWidth - alertObj.offsetWidth)/2 + "px";
+    alertObj.style.visiblity="visible";
+
+    h1 = alertObj.appendChild(d.createElement("h1"));
+    h1.appendChild(d.createTextNode(ALERT_TITLE));
+
+    msg = alertObj.appendChild(d.createElement("p"));
+    //msg.appendChild(d.createTextNode(txt));
+    msg.innerHTML = txt;
+
+    btn = alertObj.appendChild(d.createElement("a"));
+    btn.id = "closeBtn";
+    btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
+    btn.href = "#";
+    btn.focus();
+    btn.onclick = function() { removeCustomAlert();return false; }
+
+    btn2 = alertObj.appendChild(d.createElement("a"));
+    btn2.id = "Discord";
+    btn2.appendChild(d.createTextNode(ALERT_BUTTON_DISCORD));
+    btn2.href = "#";
+    btn2.focus();
+    btn2.onclick = function() { window.open("https://discord.com/invite/lemoncityrp"); }
+
+    alertObj.style.display = "block";
+
+}
+
+function removeCustomAlert() {
+    document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
+}
+  </script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a href="index-2.html"><strong>LemonCity</strong></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <input type="checkbox" id="toggle" class="toggle--checkbox darkmode">
+      <label for="toggle" class="toggle--label"></label>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="getstarted" href="fivem://connect/5.181.31.118:30120">Gioca</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container" data-aos="fade-up">
+         <br>
+         <br>
+         <br>
+
+        <div class="section-title">
+          <h2>DATABASE</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+               <img src="../database-rp.lemoncityrp.it/lspd/assets/img/icon-lspd.png" width="32px" height="32px">
+              <h3>L.C.P.D</h3>
+              <p><a href="https://database-rp.lemoncityrp.it/lspd/" target="_blank">Database Polizia</a></p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="info-box  mb-4">
+              <img src="../database-rp.lemoncityrp.it/ems/Assets/img/icon-EMS.png" width="32px" height="32px">
+              <h3>E.M.S</h3>
+              <p><a href="https://database-rp.lemoncityrp.it/ems/" target="_blank">Database Medici</a></p>
+            </div>
+          </div>
+        </div>
+        <br>
+    </section>
+
+  </main><!-- End #main -->
+
+ <!-- ======= Footer ======= -->
+  <footer id="footer" class="metti-giu">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h3><strong>LEMONCITY</strong></h3>
+            <br>
+            <p>Progetto Creato e Sviluppato da SteCk_ & ShamZy.<br>
+            Si ringrazia l'intero corpo staff per la fiducia e l'impegno</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h4>Link Utili</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://lemoncityrp.it/staff">Staff</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="tos.html">Termini di Servizio</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="database.html" target="_blank">Database Vari</a></li>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="copyright-wrap d-md-flex py-4">
+        <div class="me-md-auto text-center text-md-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>LemonCity</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+             Developed by SteCk_ & ShamZy & Tommax.
+          </div>
+        </div>
+        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+          <a href="https://discord.com/invite/lemoncityrp" target="_blank" class="twitter"><i class="fab fa-discord"></i></a>
+          <a href="https://www.instagram.com/lemoncityrp_/" target="_blank" class="facebook"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitch.tv/lemoncity_rp" target="_blank" class="instagram"><i class="fab fa-twitch"></i></a>
+          <a href="https://www.youtube.com/channel/UCzcYQU59Ub0rWRpJiH61GHQ" target="_blank" class="google-plus"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.tiktok.com/@lemoncity_" target="_blank" class="linkedin"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+
+
+<!-- Mirrored from www.lemoncityrp.it/database by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2023 23:23:31 GMT -->
+</html>

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from www.lemoncityrp.it/changelog by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2023 23:23:31 GMT -->
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>LemonCity | Changelog</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/icon-logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script src="../kit.fontawesome.com/2b98d1dd1f.js" crossorigin="anonymous"></script>        
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <script type="text/javascript">
+    var ALERT_TITLE = "ATTENZIONE";
+var ALERT_BUTTON_TEXT = "Ok";
+var ALERT_BUTTON_DISCORD = "Discord";
+
+if(document.getElementById) {
+    window.alert = function(txt) {
+        createCustomAlert(txt);
+    }
+}
+
+function createCustomAlert(txt) {
+    d = document;
+
+    if(d.getElementById("modalContainer")) return;
+
+    mObj = d.getElementsByTagName("body")[0].appendChild(d.createElement("div"));
+    mObj.id = "modalContainer";
+    mObj.style.height = d.documentElement.scrollHeight + "px";
+
+    alertObj = mObj.appendChild(d.createElement("div"));
+    alertObj.id = "alertBox";
+    if(d.all && !window.opera) alertObj.style.top = document.documentElement.scrollTop + "px";
+    alertObj.style.left = (d.documentElement.scrollWidth - alertObj.offsetWidth)/2 + "px";
+    alertObj.style.visiblity="visible";
+
+    h1 = alertObj.appendChild(d.createElement("h1"));
+    h1.appendChild(d.createTextNode(ALERT_TITLE));
+
+    msg = alertObj.appendChild(d.createElement("p"));
+    //msg.appendChild(d.createTextNode(txt));
+    msg.innerHTML = txt;
+
+    btn = alertObj.appendChild(d.createElement("a"));
+    btn.id = "closeBtn";
+    btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
+    btn.href = "#";
+    btn.focus();
+    btn.onclick = function() { removeCustomAlert();return false; }
+
+    btn2 = alertObj.appendChild(d.createElement("a"));
+    btn2.id = "Discord";
+    btn2.appendChild(d.createTextNode(ALERT_BUTTON_DISCORD));
+    btn2.href = "#";
+    btn2.focus();
+    btn2.onclick = function() { window.open("https://discord.com/invite/lemoncityrp"); }
+
+    alertObj.style.display = "block";
+
+}
+
+function removeCustomAlert() {
+    document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
+}
+  </script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a href="index.html"><strong>LemonCity</strong></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- Disattiva e attiva darkmode -->
+      <input type="checkbox" id="toggle" class="toggle--checkbox darkmode">
+      <label for="toggle" class="toggle--label"></label>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="getstarted" href="fivem://connect/5.181.31.118:30120">Gioca</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>CHANGELOG</h2>
+          <ol>
+            <li><a href="index-2.html">Home</a></li>
+            <li>ChangeLog</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>ChangeLog</h2>
+          <p>In questa pagina verranno pubblicate tutte le modifiche che vengono attuate al server! <br> Ci auguriamo che tali modifiche siano a voi gradite, <strong>vi aspettiamo in Game!</strong></p>
+        </div>
+
+        
+          <div class="content" data-aos="fade-right">
+            <a href="#pricing" class="read-more">Scopri di più<i class="bi bi-long-arrow-right"></i></a>
+          </div>
+
+      </div>
+		
+		</section><!-- End About Section -->
+
+    <section id="pricing" class="pricing section-bg" data-aos="fade-up">
+      <div class="container">
+        <div class="row gy-3">
+        
+          <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>CHANGELOG DEL 05/08/2022</h3>
+              <ul>
+                        <li><i class="fas fa-wrench"></i> INTRODOTTO VALORE DEFAULT SULLA QUANTITÀ DELL'INVENTARIO
+                        <li><i class="fas fa-wrench"></i> AGGIUNTA ULTERIORE PROTEZIONE ANTI-DUMP
+                        <li><i class="fas fa-wrench"></i> TELEFONO AGGIORNATO E FIXATO
+                        <li><i class="fas fa-wrench"></i> AGGIUNTA BARRA VOLUME DEL TELEFONO SULLA SINISTRA
+                        <li><i class="fas fa-wrench"></i> DURABILITÀ ARMI FIXATA
+                        <li><i class="fas fa-wrench"></i> PROBLEMI LEGATI AL MIX DEI COLORI DELLA CARNAGIONE NEL MENU INIZIALE FIXATI
+                        <li><i class="fas fa-wrench"></i> AGGIUNTI E FIXATI COLORI MAKEUP NEL MENU INIZIALE
+                        <li><i class="fas fa-wrench"></i> AGGIUNTO NUOVO MENU ALLA CREAZIONE DEL PERSONAGGIO
+                        <li><i class="fas fa-wrench"></i> AGGIUNTI NUOVI DETTAGLI NELLA MODIFICA DEI LINEAMENTI FACCIALI
+                        <li><i class="fas fa-wrench"></i> FIXATO SISTEMA MASCHERE
+                        <li><i class="fas fa-wrench"></i> BLIP LAMPEGGIANTI NEI NEGOZI MASCHERE FIXATI
+                        <li><i class="fas fa-wrench"></i> FIXATA RIMOZIONE CAPPELLINO QUANDO SI RIMUOVE LA MASCHERA
+                        <li><i class="fas fa-wrench"></i> RIMOSSA EMOTE /E SUNBATHE3 CAUSA BUG-ABUSING
+                        <li><i class="fas fa-wrench"></i> AUMENTATI PREZZI DELLA PELLE
+                        <li><i class="fas fa-wrench"></i> AGGIUNTE NUOVE GRAFICHE PER I DOCUMENTI
+                        <li><i class="fas fa-wrench"></i> FIXATA IMMAGINE DEL SOGGETTO NEL PORTO D'ARMI
+                        <li><i class="fas fa-wrench"></i> FIXATO USO DELL'F7 PER SCOPRIRE I DOCUMENTI FALSI
+                        <li><i class="fas fa-wrench"></i> AGGIUNTE NUOVE COMPATTE AL CONCESSIONARIO
+                        <li><i class="fas fa-wrench"></i> CAMBIATE PARTICELLE ESPLOSIONI
+                        <li><i class="fas fa-wrench"></i> RIMOSSO PROCESSO E RACCOLTA EROINA
+                        <li><i class="fas fa-wrench"></i> RIMOSSO PROCESSO E RACCOLTA LEMONSKY
+                        <li><i class="fas fa-wrench"></i> CAMBIATE POSIZIONI AI CAMPI E PROCESSI
+                        <li><i class="fas fa-wrench"></i> AUMENTATI PREZZI DROGA
+                        <li><i class="fas fa-wrench"></i> RIFATTI HANDLING POLIZIA
+                        <li><i class="fas fa-wrench"></i> INSERITO "/azione (Nome Player) [ID] è respawnato" QUANDO UN PLAYER RESPAWNA IN OSPEDALE
+                        <li><i class="fas fa-wrench"></i> OTTIMIZZATAZIONE SCRIPT
+                        <li><i class="fas fa-wrench"></i> DIMINUITI PED
+                        <li><i class="fas fa-wrench"></i> DIMINUITA PROBABILITA' DI CADERE PER BUNNYHOP
+                        <li><i class="fas fa-wrench"></i> AGGIUNTI NOTEPAD UTILIZZABILI
+                        <li><i class="fas fa-wrench"></i> AGGIUNTO /dm (PER LO STAFF)
+                        <li><i class="fas fa-wrench"></i> AGGIUNTI CARTELLONI GAMEHOSTING, VOICEHOSTING E SERVEREASY
+                        <li><i class="fas fa-wrench"></i> AGGIUNTO ANTI SPECTATE
+                        <li><i class="fas fa-wrench"></i> AGGIUNTO ANTI GODMODE
+                        <li><i class="fas fa-wrench"></i> AGGIUNTO ANTI GIVE ARMATURA
+                        <li><i class="fas fa-wrench"></i> AGGIUNTA NUOVA CENTRALE LSPD + FBI
+                        <li><i class="fas fa-wrench"></i> AGGIORNATO STORE
+                        <li><i class="fas fa-wrench"></i> AGGIUNTA LEMON WHEEL UTILIZZABILE OGNI SERA DELLE 22:00 ALLE 23:00
+                        <li><i class="fas fa-wrench"></i> CAMBIATA LOADING SCREEN
+                        <li><i class="fas fa-wrench"></i> FIXATO ORARIO HUD
+                        <li><i class="fas fa-wrench"></i> CAMBIATO SUV EMS
+                        <li><i class="fas fa-wrench"></i> CAMBIATO BAN PER VDM AUTOMATICO DA PERMANENTE A 2GG
+                        <li><i class="fas fa-wrench"></i> FIXATO MULTI USO DEL SETPG (I PLAYER NON SI SOVRAPPONGONO PIU')
+  
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>	
+    </section>
+
+    <section id="pricing" class="pricing section-bg" data-aos="fade-up">
+      <div class="container">
+        <div class="row gy-3">
+        
+          <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>CHANGELOG DEL 08/07/2022</h3>
+              <ul>
+                      <li><i class="fas fa-wrench"></i> FIX VARI INVENTARIO
+                      <li><i class="fas fa-wrench"></i> AGGIUNTA BARRA DI PROGRESSO INTERATTIVA CHE INDICA IL PESO DISPONIBILE NELL'INVENTARIO
+                      <li><i class="fas fa-wrench"></i> FIXATI LONGSHOT (NON CI SARA' PIU' NESSUN TIPO DI TANK)
+                      <li><i class="fas fa-wrench"></i> CAMBIATA ANIMAZIONE RADIO
+                      <li><i class="fas fa-wrench"></i> OTTIMIZZATO SERVER (AVRETE IN MEDIA +20 FPS)
+                      <li><i class="fas fa-wrench"></i> AGGIUNTO SITCAR
+                      <li><i class="fas fa-wrench"></i> FIXATA APERTURA SACCHETTI
+                      <li><i class="fas fa-wrench"></i> CAMBIATO STILE PROGRESS BAR
+                      <li><i class="fas fa-wrench"></i> RESTYLE MENU GARAGE
+                      <li><i class="fas fa-wrench"></i> NUOVO TELEFONO
+                      <li><i class="fas fa-wrench"></i> RESTYLE MENU BANCHE
+                      <li><i class="fas fa-wrench"></i> OTTIMIZZATE VARIE RISORSE
+                      <li><i class="fas fa-wrench"></i> REWORKATO HANDLING E MODELLO 3D AUDI R8
+                      <li><i class="fas fa-wrench"></i> AGGIUNTA INTERAZIONE PER RIMUOVERE LA MASCHERA AD UN PLAYER MORTO (MENU F7)
+                      <li><i class="fas fa-wrench"></i> FIXATO LAG DEI MENU SERVER
+                      <li><i class="fas fa-wrench"></i> NUOVE AUTO BIT
+                      <li><i class="fas fa-wrench"></i> AGGIUNTO SISTEMA ANTI VDM
+                      <li><i class="fas fa-wrench"></i> AGGIORNATA VERSIONE SERVER A "THE CONTRACT DLC"
+                      <li><i class="fas fa-wrench"></i> NUOVO SISTEMA GARE ILLEGALI
+                      <li><i class="fas fa-wrench"></i> OTTIMIZZATE ANIMAZIONI TELEFONO
+                      <li><i class="fas fa-wrench"></i> RESE PIU' "SMOOTH" ANIMAZIONI TELEFONO
+                      <li><i class="fas fa-wrench"></i> NUOVI TATUAGGI
+                      <li><i class="fas fa-wrench"></i> NUOVI ANTIPROIETTILI PER GANG
+                      <li><i class="fas fa-wrench"></i> FIXATO PROBLEMA "DISCONNESSIONE DA GTA" 
+                      <li><i class="fas fa-wrench"></i> FIXATO SALVATAGGIO SFONDO,SUONERIA,PIN TELEFONICO
+                      <li><i class="fas fa-wrench"></i> SPAWN DINAMICO GARAGE CENTRALE 
+                      <li><i class="fas fa-wrench"></i> ULTERIORE PROTEZIONE CONTRO I MODDER
+                      <li><i class="fas fa-wrench"></i> FIX VARI
+  
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>	
+    </section>
+
+    <section id="pricing" class="pricing section-bg" data-aos="fade-up">
+      <div class="container">
+        <div class="row gy-3">
+        
+          <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>CHANGELOG DEL 10/06/2022</h3>
+              <ul>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTE NUOVE EMOTE
+                    <li><i class="fas fa-wrench"></i> TRADOTTO MENU' ARREDAMENTO
+                    <li><i class="fas fa-wrench"></i> AGGIUNTA FLEBO
+                    <li><i class="fas fa-wrench"></i> AGGIUNTI NUOVI FARMACI
+                    <li><i class="fas fa-wrench"></i> AGGIUNTO DEFIBRILLATORE 
+                    <li><i class="fas fa-wrench"></i> AGGIUNTA NUOVA ARMA
+                    <li><i class="fas fa-wrench"></i> AGGIUNTO SOTTO DOMINIO PER I DATABASE ONLINE 
+                    <li><i class="fas fa-wrench"></i> FIXATA DARKMODE DATABASE POLIZIA
+                    <li><i class="fas fa-wrench"></i> VELOCIZZATO DATABASE POLIZIA
+                    <li><i class="fas fa-wrench"></i> AGGIUNTO DATABASE EMS
+                    <li><i class="fas fa-wrench"></i> MODIFICATO SISTEMA MORTE
+                    <li><i class="fas fa-wrench"></i> CAMBIATA ANIMAZIONE CROUCH
+                    <li><i class="fas fa-wrench"></i> RIMOSSO SPEED BOOST CROUCH
+                    <li><i class="fas fa-wrench"></i> AGGIUNTA POSSIBILITA' DI ABBASSARSI LEGGERMENTE MENTRE SI MIRA
+                    <li><i class="fas fa-wrench"></i> FIXATO ORARIO DOCUMENTI
+                    <li><i class="fas fa-wrench"></i> RESTYLE MENU ESC
+                    <li><i class="fas fa-wrench"></i> MESSAGGIO DINAMICO DISCONNESSIONE IN BASE ALL'ATTUALE ORA
+                    <li><i class="fas fa-wrench"></i> AGGIUNTA POSSIBILITA' DI USARE IL MENU ESC ANCHE CON LE FRECCETTE DIREZIONALI DELLA TASTIERA
+                    <li><i class="fas fa-wrench"></i> AGGIUNTA POSSIBLITA' DI USARE LA MAPPA ANCHE DA MORTI
+                    <li><i class="fas fa-wrench"></i> FIXATI MOLTI MENU' CHE POTEVANO ESSERE APERTI ANCHE DA MORTO
+                    <li><i class="fas fa-wrench"></i> AGGIUNTO SISTEMA GARE ILLEGALI
+                    <li><i class="fas fa-wrench"></i> FIXATO ERRORE GARAGE
+                    <li><i class="fas fa-wrench"></i> AGGIUNTA POSSIBLITA' DI CONTROLLARE TRAMITE LA LISTA VEICOLI SE IL VEICOLO E' SEQUESTRATO O MENO
+                    <li><i class="fas fa-wrench"></i> DISABILITATE LE COLLISIONI DELL'AUTO QUANDO SI ACCEDE AL MENU' DEL GARAGE
+                    <li><i class="fas fa-wrench"></i> AGGIUNTO NUOVO LOCALE Nikki Beach 
+                    <li><i class="fas fa-wrench"></i> CAMBIATE NOTIFICHE INVENTARIO
+                    <li><i class="fas fa-wrench"></i> RESTYLE NEGOZIETTI VESTITI
+                    <li><i class="fas fa-wrench"></i> AGGIUNTA POSSIBILITA' DI VISITARE IL NOSTRO MERCHANDISING DIRETTAMENTE DAL GAME
+                    <li><i class="fas fa-wrench"></i> FIX VARI
+  
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>	
+    </section>
+
+    <section id="pricing" class="pricing section-bg" data-aos="fade-up">
+      <div class="container">
+        <div class="row gy-3">
+        
+          <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>CHANGELOG DEL 06/05/2022</h3>
+              <ul>
+                   <li><i class="fas fa-wrench"></i> FIXATO SKATEBOARD</i>
+                   <li><i class="fas fa-wrench"></i> FIXATA SVAPO E LIQUIDI</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTO OSPEDALE A NORD</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTA DIVISA SWAT [BY @Tigre 💜]</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTA DIVISA ESPORT LEMON</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTO ANTI SPAWN VEICOLI TRAMITE MOD MENU</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTO SISTEMA ANTI GIVE ARMI/VITA TRAMITE MOD MENU</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTA MAPPA FORESTALE A NORD</i>
+                   <li><i class="fas fa-wrench"></i> FIXATE BANCHE</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTE VIDEO CHIAMATE</i>
+                   <li><i class="fas fa-wrench"></i> FIXATE LE PISCINE NELL'ATTICO "ECLIPSE TOWER"</i>
+                   <li><i class="fas fa-wrench"></i> FIXATO SLOG NEGLI ATTICI</i>
+                   <li><i class="fas fa-wrench"></i> COMPATTATI TUTTI I BLIP DELL'ATTICO "ECLIPSE TOWER" DENTRO UNO SOLO</i>
+                   <li><i class="fas fa-wrench"></i> FIXATE FONDINE</i>
+                   <li><i class="fas fa-wrench"></i> FIXATI BUG MODIFICHE VEICOLI</i>
+                   <li><i class="fas fa-wrench"></i> REWORKATI ALCUNI HANDLING</i>
+                   <li><i class="fas fa-wrench"></i> RIORDINATA SCOREBOARD</i>
+                   <li><i class="fas fa-wrench"></i> FIXATA MAPPA THE LOST</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTO ORARIO E DATA REALE SULL'HUD</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTO NUOVO LOCALE @🪐  | Galaxy Club </i>
+                   <li><i class="fas fa-wrench"></i> QUANDO SI VIENE RESSATI LA FAME E LA SETE TORNANO AL 100%</i>
+                   <li><i class="fas fa-wrench"></i> CAMBIATA MAPPA @🦄 | Vanilla Unicorn </i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTO BLIP PER LA LAPDANCE AL @🦄 | Vanilla Unicorn </i>
+                   <li><i class="fas fa-wrench"></i> FIXATO FRAMELAG ZONA ARMERIA-VANILLA</i>
+                   <li><i class="fas fa-wrench"></i> FIXATO BUG MASCHERE [QUANDO SI INDOSSA UNA MASCHERA NON FUORIUSCIRANO PIU' PARTI DI FACCIA O CAPELLI]</i>
+                   <li><i class="fas fa-wrench"></i> FIX VARI</i>
+  
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>	
+    </section>
+
+
+    <section id="pricing" class="pricing section-bg" data-aos="fade-up">
+      <div class="container">
+        <div class="row gy-3">
+        
+          <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>CHANGELOG DEL 11/04/2022</h3>
+              <ul>
+                
+                   <li><i class="fas fa-wrench"></i> REWORKATI TUTTI GLI HANDLING DELLE AUTO</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTO SKATEBOARD</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTI NUOVI LOCALI</i>
+                   <li><i class="fas fa-wrench"></i> COMPATTATE TUTTE LE MAPPE</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTO SISTEMA CACHE PER LE MAPPE (PICCOLO BOOST FPS)</i>
+                   <li><i class="fas fa-wrench"></i> FIXATO BUG SKIN DONNA</i>
+                   <li><i class="fas fa-wrench"></i> AGGIORNATA LOGICA ANTI BAN EVADING</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTA SIGARETTA ELETTRONICA</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTI LIQUIDI SIGARETTA ELETTRONICA</i>
+                   <li><i class="fas fa-wrench"></i> FIXATE LIVREE AUTO</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTO METODO ANTI DUMP</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTA ULTERIORE PROTEZIONE CONTRO I MODDER</i>
+                   <li><i class="fas fa-wrench"></i> PERFEZIONATA ECONOMIA SERVER (AUMENTATI JOB NO-WHITELIST ED ALTRO)</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTE LUCI AL @🧰 | Raze Custom </i>
+                   <li><i class="fas fa-wrench"></i> SISTEMATI PREZZI AUTO DEL CONCESSIONARIO</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTO NUOVO JOB NO WHITELIST</i>
+                   <li><i class="fas fa-wrench"></i> REWORKATO CENTRO IMPIEGHI</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTA ULTERIORE PROTEZIONE CONTRO I MODDER</i>
+                   <li><i class="fas fa-wrench"></i> RISOLTO CRASH OSPEDALE</i>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTO ANTI HEAD GLITCH</i>
+                   <li><i class="fas fa-wrench"></i> OTTIMIZZATI POLIGONI DELLE MAPPE</i>
+                   <li><i class="fas fa-wrench"></i> FIX VARI</i>
+  
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>	
+    </section>
+
+
+
+    <section id="pricing" class="pricing section-bg" data-aos="fade-up">
+      <div class="container">
+        <div class="row gy-3">
+        
+          <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>CHANGELOG DEL 25/03/2022</h3>
+              <ul>
+                
+                   <li><i class="fas fa-wrench"></i> REWORKATI LUCCHETTI AUTO </li>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTO SOUND CUSTOM SKYLINE</li>
+                   <li><i class="fas fa-wrench"></i> FIXATE FLEECA</li>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTO SMONTA MUNIZIONI</li>
+                   <li><i class="fas fa-wrench"></i> FIXATA LOGIN ANTI BAN EVADING</li>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTO VOICE LIMITER ALL'OSPEDALE</li>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTO BLIP GIUBBOTTI AUTOMATICI</li>
+                   <li><i class="fas fa-wrench"></i> FIXATE LUCI URUS</li>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTO /bastone</li>
+                   <li><i class="fas fa-wrench"></i> FIXATE COLLISIONI OSPEDALE</li>
+                   <li><i class="fas fa-wrench"></i> NUOVO SISTEMA GESTIONE AZIENDALE</li>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTE NUOVE EMOTE (+150)</li>
+                   <li><i class="fas fa-wrench"></i> CAMBIATO SISTEMA SPAWN</li>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTE EMOTE SEX RP</li>
+                   <li><i class="fas fa-wrench"></i> FIX VARI INVENTARIO</li>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTI NUOVI JOB NO WHITELIST</li>
+                   <li><i class="fas fa-wrench"></i> CAMBIATA MAPPA CBD BASE</li>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTI NUOVI LOCALI</li>
+                   <li><i class="fas fa-wrench"></i> NUOVO SISTEMA TUNING AUTO</li>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTI NUOVI VESTITI MODDATI (GRAZIE A @Tigre 💜#1527 E @revolver#9922)</li>
+                   <li><i class="fas fa-wrench"></i> DIMINUITA DENSITA' PED</li>
+                   <li><i class="fas fa-wrench"></i> OTTIMIZZATO RESMON CLIENT</li>
+                   <li><i class="fas fa-wrench"></i> CAMBIATA MAPPA TRIBUNALE </li>
+                   <li><i class="fas fa-wrench"></i> CAMBIATA MAPPA COMUNE</li>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTA POSSIBILITA' DI FERMARSI MENTRE SI RACCOGLIE LA DROGA</li>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTO ANTI HEADGLITCH</li>
+                   <li><i class="fas fa-wrench"></i> CAMBIATA MUSICA LOADING SCREEN   </li>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTA POSSIBILITA' DI SCEGLIERE A CHI PASSARE L'ITEM</li>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTE NUOVE AUTO</li>
+                   <li><i class="fas fa-wrench"></i> AGGIUNTI SOUND CUSTOM AUTO</li>
+                   <li><i class="fas fa-wrench"></i> FIXATI CAMPI DROGA</li>
+                   <li><i class="fas fa-wrench"></i> FIX VARI </li>
+  
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>	
+    </section>
+
+
+    <section id="pricing" class="pricing section-bg" data-aos="fade-up">
+      <div class="container">
+        <div class="row gy-3">
+        
+          <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>CHANGELOG DEL 03/02/2022</h3>
+              <ul>
+                
+                <li><i class="fas fa-wrench"></i> AGGIUNTI NUOVI VESTITI [GLI SLOT TRASPARENTI VERRANNO COL TEMPO SOSTITUITI DA ALTRI VESTITI] </li>
+                <li><i class="fas fa-wrench"></i> FIXATA ANIMAZIONE MORTE </li>
+                <li><i class="fas fa-wrench"></i> FIXATE YUSUF ARMI </li>
+                <li><i class="fas fa-wrench"></i> FIXATI ACCESSORI ARMA </li>
+                <li><i class="fas fa-wrench"></i> AGGIUNTO MENU' RICHIESTE DI SOCCORSO [PER I MEDICI] </li>
+                <li><i class="fas fa-wrench"></i> FIXATA PERDITA ACCESSORI QUANDO SI PASSAVA L'ARMA AD UN ALTRO GIOCATORE </li>
+                <li><i class="fas fa-wrench"></i> AGGIUNTE IMMAGINI MANCANTI DEI VARI ACCESSORI </li>
+                <li><i class="fas fa-wrench"></i> FIXATA PERDITA OGGETTI DA DEPOSITI </li>
+                <li><i class="fas fa-wrench"></i> VELOCIZZATO SITO WEB https://lemoncityrp.it/ </li>
+                <li><i class="fas fa-wrench"></i> VELOCIZZATO SITO WEB https://lspd.lemoncityrp.it/ </li>
+                <li><i class="fas fa-wrench"></i> FIXATA SEGRETERIA TELEFONO </li>
+                <li><i class="fas fa-wrench"></i> AGGIORNATA VERSIONE TELEFONO </li>
+                <li><i class="fas fa-wrench"></i> REWORKATE MARKET E FLEECA </li>
+                <li><i class="fas fa-wrench"></i> AGGIUNTE TINTURE ARMI [PLATINO E ROSA] </li>
+                <li><i class="fas fa-wrench"></i> FIXATE TEXTURE ATTICO ECLIPSE TOWER </li>
+                <li><i class="fas fa-wrench"></i> FIXATE TEXTURE FLEECA E LEMON BANK </li>
+                <li><i class="fas fa-wrench"></i> AGGIUNTO MESSAGGIO QUANDO VIENE RIMOSSO O AGGIUNTO UN ITEM DALL'INVENTARIO </li>
+                <li><i class="fas fa-wrench"></i> FIX VARI INVENTARIO </li>
+                <li><i class="fas fa-wrench"></i> IMPLEMENTATO SISTEMA ANTI BAN EVADING </li>
+                <li><i class="fas fa-wrench"></i> LA FAME E LA SETE NON SI RESETTERANNO PIU' RIAVVIANDO </li>
+                <li><i class="fas fa-wrench"></i> LE STRISCE CHIODATE SI RIMUOVERANNO IN AUTOMATICO DOPO 5 MINUTI </li>
+                <li><i class="fas fa-wrench"></i> FIX VARI </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>	
+    </section>
+
+
+    <section id="pricing" class="pricing section-bg" data-aos="fade-up">
+      <div class="container">
+        <div class="row gy-3">
+        
+          <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>CHANGELOG DEL 13/01/2022</h3>
+              <ul>
+                
+             
+                <li><i class="fas fa-wrench"></i> FIXATI CRASH DEL SERVER </li>
+                <li><i class="fas fa-wrench"></i> FIXATI ALCUNI PROBLEMI CON IL TELEFONO </li>
+                <li><i class="fas fa-wrench"></i> OTTIMIZZATO CLIENT SIDE  </li>
+                <li><i class="fas fa-wrench"></i> OTTIMIZZATO SERVER SIDE  </li>
+                <li><i class="fas fa-wrench"></i> COMPATTATE RISORSE SERVER </li>
+                <li><i class="fas fa-wrench"></i> AGGIUNTA LIMITAZIONE RANGE VOCALE NEI PRESSI DELLA CENTRALE </li>
+                <li><i class="fas fa-wrench"></i> FIXATE FLEECA </li>
+                <li><i class="fas fa-wrench"></i> FIXATO SALVATAGGIO FOTO IN GALLERIA </li>
+                <li><i class="fas fa-wrench"></i> FIXATO COMANDO "/nascondiooc" </li>
+                <li><i class="fas fa-wrench"></i> AGGIORNATA VERSIONE SALTYCHAT </li>
+                <li><i class="fas fa-wrench"></i> IMPLEMENTATO SISTEMA AUTOMATICO DI RISCATTO PACCHETTI VIP </li>
+                <li><i class="fas fa-wrench"></i> FIX VARI E AGGIUNTA DARK MODE SUL NOSTRO SITO: https://lemoncityrp.it/ </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: LAMBORGHINI URUS </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: LAMBORGHINI HURACAN </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: LAMBORGHINI VENENO </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: MERCEDES AMG GTR-R  </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: MERCEDES GT 63S AMG </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: MERCEDES CLASSE A </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO MODELLO 3D E HANDLING: AUDI RS7 </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO MODELLO 3D E HANDLING: SUV MEDICI </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: AUDI A6 </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: AUDI Q7  </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: AUDI R8 </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: PORSCHE CAYENNE </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: PORSCHE 718 BOXSTER </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: TOYOTA SUPRA </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: SUBARU IMPREZA </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: NISSAN SKYLINE R34 </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: NISSAN GTR R35 </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: BUGATTI CHIRON  </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: RANGE ROVER VELAR </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: FERRARI 458 ITALIA </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: FERRARI 488 PISTA </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: TESLA MODEL X  </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: KAWASAKI NINJA </li>
+                <li><i class="fas fa-wrench"></i> MODIFICATO HANDLING: KTM / SANCHEZ </li>
+                <li><i class="fas fa-wrench"></i> FIXATE MODIFICHE TMAX  </li>
+                <li><i class="fas fa-wrench"></i> FIXATE MODIFICHE KAWASAKI NINJA </li>
+                <li><i class="fas fa-wrench"></i> HANDLING BY @emanuele_queirolo#9846</li>
+                <li><i class="fas fa-wrench"></i> FIX VARI </li>
+
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>	
+    </section>
+
+    <section id="pricing" class="pricing section-bg" data-aos="fade-up">
+      <div class="container">
+        <div class="row gy-3">
+        
+          <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>CHANGELOG DEL 01/01/2022</h3>
+              <ul>
+                
+             
+                <li><i class="fas fa-wrench"></i> AUMENTATA VELOCITA' MASSIMA NITRO </li>
+                <li><i class="fas fa-wrench"></i> RIMOSSA STEALTH MODE </li>
+                <li><i class="fas fa-wrench"></i> RIMOSSA STAMINA </li>
+                <li><i class="fas fa-wrench"></i> AGGIORNATA VERSIONE SALTYCHAT </li>
+                <li><i class="fas fa-wrench"></i> AGGIUNTO STORICO TRANSAZIONI SULL'APP BANCA </li>
+                <li><i class="fas fa-wrench"></i> AGGIUNTI NUOVI TATUAGGI </li>
+                <li><i class="fas fa-wrench"></i> AGGIUNTA VOCE "CIVICO INTERDETTO" NEL MENU' POLIZIESCO </li>
+                <li><i class="fas fa-wrench"></i> AGGIUNTA ANIMAZIONE ESTRAZIONE DALLA FONDINA QUANDO SI HA EFFETTIVAMENTE LA FONDINA </li>
+                <li><i class="fas fa-wrench"></i> AGGIUNTE NUOVE AUTO AL CONCESSIONARIO </li>
+                <li><i class="fas fa-wrench"></i> RIMOSSA POSSIBILITA' DI PARLARE DA MORTO CON LA RADIO </li>
+                <li><i class="fas fa-wrench"></i> RIMOSSA POSSIBILITA' DI PARLARE DA MORTO </li>
+                <li><i class="fas fa-wrench"></i> RIMOSSA POSSIBILITA' DI SPARARE ED EFFETTUARE CAPRIOLE CON LA RADIO IN MANO </li>
+                <li><i class="fas fa-wrench"></i> CAMBIATA ANIMAZIONE RADIO </li>
+                <li><i class="fas fa-wrench"></i> FIXATO BUG SPOSTAMENTO ITEM INVENTARIO </li>
+                <li><i class="fas fa-wrench"></i> FIXATO BUG VISIVO FONDINA </li>
+                <li><i class="fas fa-wrench"></i> FIXATO BUG VISIVO "PELATA" </li>
+                <li><i class="fas fa-wrench"></i> FIXATA SAFEZONE MACELLERIA </li>
+                <li><i class="fas fa-wrench"></i> FIXATI ALCUNI HANDLING (UN GRAZIE A @! Matte#3146  ) </li>
+                <li><i class="fas fa-wrench"></i> FIXATO BUG MESSAGGIO "DEPOSITO GIA' APERTO" </li>
+                <li><i class="fas fa-wrench"></i> FIXATI CRASH </li>
+                <li><i class="fas fa-wrench"></i> FIX VARI </li>
+
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>	
+    </section>
+
+
+    <section id="pricing" class="pricing section-bg" data-aos="fade-up">
+      <div class="container">
+        <div class="row gy-3">
+        
+          <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>CHANGELOG DEL 19/12/2021</h3>
+              <ul>
+                
+             
+              <li><i class="fas fa-wrench"></i> FIXATA RISOLUZIONE HUD CIRCOLARE </li>
+              <li><i class="fas fa-wrench"></i> FIXATA POSIZIONE WAYPOINT HUD </li>
+              <li><i class="fas fa-wrench"></i> FIXATA RIMOZIONE HUD ALL'APERTURA DELLA MAPPA </li>
+              <li><i class="fas fa-wrench"></i> AGGIUNTE RAPINE FLEECA </li>
+              <li><i class="fas fa-wrench"></i> AUMENTATI PREZZI RAPINE </li>
+              <li><i class="fas fa-wrench"></i> CAMBIATA MAPPA IMPORT </li>
+              <li><i class="fas fa-wrench"></i> CAMBIATA MAPPA CONCESSIONARIO </li>
+              <li><i class="fas fa-wrench"></i> CAMBIATA MAPPA MECCANICO  (TOKYO DRIFT) </li>
+              <li><i class="fas fa-wrench"></i> FIXATO BUG ANIMAZIONE MORTE (A VOLTE SI RIMANEVA IN PIEDI) </li>
+              <li><i class="fas fa-wrench"></i> FIXATI BUG DUPLICAZIONE INVENTARIO </li>
+              <li><i class="fas fa-wrench"></i> FIXATI TUTTI I BUG DELL'INVENTARIO </li>
+              <li><i class="fas fa-wrench"></i> FIXATO BUG DELLA DURABILITA' E DEI COLPI CHE SI AVEVA AL PASSAGGIO O AL DROP DI UN ARMA  </li>
+              <li><i class="fas fa-wrench"></i> AGGIUNTA ICONA MICROFONO SULL'HUD </li>
+              <li><i class="fas fa-wrench"></i> AGGIUNTA ICONA RANGE VOCALE SULL'HUD </li>
+              <li><i class="fas fa-wrench"></i> AGGIUNTA ICONA KILOMETRAGGIO AUTO SULL'HUD </li>
+              <li><i class="fas fa-wrench"></i> AGGIUNTO SISTEMA KILOMETRAGGIO AUTO </li>
+              <li><i class="fas fa-wrench"></i> ALL'AUMENTARE DEI KILOMETRI DELL'AUTO NE RESENTIRANNO LE PRESTAZIONI. </li>
+              <li><i class="fas fa-wrench"></i> FIXATO INPUT LAG TASTI SIRENE </li>
+              <li><i class="fas fa-wrench"></i> FIXATO CLACSON VEICOLI D'EMERGENZA </li>
+              <li><i class="fas fa-wrench"></i> L'AUTO APPENA ACQUISTATA NON SPAWNERA' PIU' SPORCA </li>
+              <li><i class="fas fa-wrench"></i> VERRA' AGGIUNTO DELLO STRESS QUANDO SI HA UN INCIDENTE </li>
+              <li><i class="fas fa-wrench"></i> AGGIUNTO EFFETTO "INCIDENTE AUTO" </li>
+              <li><i class="fas fa-wrench"></i> AGGIUNTO SPEGNIMENTO MOTORE QUANDO SI HA UN INCIDENTE GRAVE </li>
+              <li><i class="fas fa-wrench"></i> FIX VARI </li>
+              <li><i class="fas fa-wrench"></i> AGGIORNATO HUD  </li>
+              <li><i class="fas fa-wrench"></i> AGGIUNTO HUD CIRCOLARE </li>
+              <li><i class="fas fa-wrench"></i> SPOSTATA ICONA CINTURA </li>
+              <li><i class="fas fa-wrench"></i> CAMBIATE ICONE FAME,SETE,STRESS,ARMATURA </li>
+              <li><i class="fas fa-wrench"></i> AGGIORNATA MAPPA CYBERHUB </li>
+              <li><i class="fas fa-wrench"></i> FIXATO IL BUG CHE SI RISCONTRAVA ATTIVANDO LA CANARY MODE </li>
+              <li><i class="fas fa-wrench"></i> AGGIUNTE BARBE LUNGHE (ACCESSIBILI DALLA SEZIONE MASCHERE) </li>
+              <li><i class="fas fa-wrench"></i> AGGIUNTA POSSIBILITA' DI MONTARE MIRINI SULLE ARMI </li>
+              <li><i class="fas fa-wrench"></i> OTTIMIZZATO PESO TEXTURE SERVER (AVRETE MENO PROBLEMI CON LA "MAPPA TRASPARENTE") </li>
+              <li><i class="fas fa-wrench"></i> OTTIMIZZATE LE PRESTAZIONI DEL SERVER (LATO CLIENT) </li>
+              <li><i class="fas fa-wrench"></i> OTTIMIZZATO SISTEMA SIRENE </li>
+              <li><i class="fas fa-wrench"></i> CAMBIATI TASTI SIRENE, I NUOVI TASTI SONO Q, VIRGOLA ED R </li>
+              <li><i class="fas fa-wrench"></i> DIFFERENZIATE SIRENE MEDICI E POLIZIA </li>
+              <li><i class="fas fa-wrench"></i> RIMOSSO LOGO ROTANTE </li>
+              <li><i class="fas fa-wrench"></i> AGGIUNTO LOGO STATICO IN ALTO A DESTRA </li>
+              <li><i class="fas fa-wrench"></i> AGGIUNTA POSSIBILITA' DI CREARE PUPAZZI DI NEVE </li>
+              <li><i class="fas fa-wrench"></i> AGGIUNTA POSSIBILITA' DI RACCOGLIERE PALLE DI NEVE E LANCIARLE </li>
+              <li><i class="fas fa-wrench"></i> AGGIUNTO HUD IN BASSO A DESTRA CHE INDICA QUANDO SI STA PARLANDO </li>
+              <li><i class="fas fa-wrench"></i> FIXATE LIVREE SUPRA </li>
+              <li><i class="fas fa-wrench"></i> FIXATO BUG COLORAZIONE 458 ITALIA </li>
+              <li><i class="fas fa-wrench"></i> FIXATA LIVREA MITSUBISHI LANCER EVOLUTION 2002 </li>
+              <li><i class="fas fa-wrench"></i> FIXATO FULLKIT AFRICA TWIN </li>
+              <li><i class="fas fa-wrench"></i> FIXATO BAGAGLIAIO GUARDIAN </li>
+              <li><i class="fas fa-wrench"></i> FIXATO HANDLING GTR (UN RINGRAZIAMENTO A @LordSe7n#5376 PER I CONSIGLI) </li>
+              <li><i class="fas fa-wrench"></i> FIXATO HANDLING MITSUBISHI LANCER EVOLUTION 2002 (UN RINGRAZIAMENTO A @LordSe7n#5376 PER I CONSIGLI) </li>
+
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>	
+    </section>
+
+        <section id="pricing" class="pricing section-bg" data-aos="fade-up">
+          <div class="container">
+            <div class="row gy-3">
+            
+              <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="box">
+                  <h3>CHANGELOG DEL 12/10/2021</h3>
+                  <ul>
+                    
+                    <li><i class="fas fa-wrench"></i> REWORKATO MENU LISTA DIPENDENTI </li>
+                    <li><i class="fas fa-wrench"></i> CAMBIATA ANIMAZIONE APERTURA INVENTARIO </li>
+                    <li><i class="fas fa-wrench"></i> REWORKATA MAPPA RAZE CUSTOM </li>
+                    <li><i class="fas fa-wrench"></i> FIXATA LISTA DIPENDENTI [SARA' POSSIBILE VISUALIZZARE ANCHE I LAVORATORI FUORI SERVIZIO] </li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTA BLACKLIST PAROLE SUGLI /ME </li>
+                    <li><i class="fas fa-wrench"></i> FIXATE FOTO TELEFONO </li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTA POSSIBILITA' DI CREARE UNA SEGRETERIA CUSTOM  </li>
+                    <li><i class="fas fa-wrench"></i> FIXATI MESSAGGI VOCALI TELEFONO   [SARANNO VISUALIZZABILI CHIAMANDO IL 190 OVVERO LA SEGRETERIA] </li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTA RUOTA DELLA FORTUNA AL CASINO' </li>
+                    <li><i class="fas fa-wrench"></i> FIXATO BUG BLACKJACK </li>
+                    <li><i class="fas fa-wrench"></i> FIXATA KURUMA ANTI PROIETTILE </li>
+                    <li><i class="fas fa-wrench"></i> FIXATI ACCESSORI ARMI </li>
+					          <li><i class="fas fa-wrench"></i> FIXATO PASSAGGIO ITEM CON INVENTARIO PIENO </li>
+					          <li><i class="fas fa-wrench"></i> OTTIMIZZATO PESO TELEFONO </li>
+					          <li><i class="fas fa-wrench"></i> OTTIMIZZATO PESO INVENTARIO </li>
+					          <li><i class="fas fa-wrench"></i> ALZATI PREZZI CACCIA </li>
+					          <li><i class="fas fa-wrench"></i> FIXATE STRISCE CHIODATE </li>
+					          <li><i class="fas fa-wrench"></i> FIXATA RIMOZIONE "PROP" TRAMITE IL MENU F6 </li>
+					          <li><i class="fas fa-wrench"></i> REWORKATA MAPPA VESPUCCI </li>
+					          <li><i class="fas fa-wrench"></i> AGGIUNTA ZONA "NO PARKING" IN OSPEDALE </li>
+					          <li><i class="fas fa-wrench"></i> MODIFICATA MAPPA VANILLA </li>
+					          <li><i class="fas fa-wrench"></i> AGGIUNTA POSSIBILITA' DI CONTROLLARE CASE E VEICOLI DEI PLAYER [SOLTANTO POLIZIA] </li>
+					          <li><i class="fas fa-wrench"></i> FIXATE MOLOTOV, C4, RPG E TUTTI GLI ESPLOSIVI </li>
+					          <li><i class="fas fa-wrench"></i> AGGIUNTI NOMI AI VEICOLI ADD ON [NON USCIRA' PIU' "NULL" COME NOME DEL VEICOLO] </li>
+					          <li><i class="fas fa-wrench"></i> REWORKATO SISTEMA LUCCHETTI AUTO </li>
+                    <li><i class="fas fa-wrench"></i>FIX VARI </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>	
+        </section>
+	  
+    </section><!-- End About Section -->
+
+        <section id="pricing" class="pricing section-bg" data-aos="fade-up">
+          <div class="container">
+            <div class="row gy-3">
+            
+              <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="box">
+                  <h3>CHANGELOG DEL 31/08/2021</h3>
+                  <ul>
+                    
+                    <li><i class="fas fa-wrench"></i> WIPE DEL SERVER </li>
+                    <li><i class="fas fa-wrench"></i> AUMENTATI SLOT TEAMSPEAK A 500 </li>
+                    <li><i class="fas fa-wrench"></i> AUMENTATI SLOT SERVER A 400 </li>
+                    <li><i class="fas fa-wrench"></i> RIFATTI TUTTI GLI HANDLING DELLE AUTO </li>
+                    <li><i class="fas fa-wrench"></i> NUOVO SISTEMA DI INVENTARI </li>
+                    <li><i class="fas fa-wrench"></i> NUOVA ANIMAZIONE "ALZA MANI" </li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTO SISTEMA SERIALI ALLE ARMI </li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTO SISTEMA DURABILITA'ARMI </li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTO NUOVO TELEFONO </li>
+                    <li><i class="fas fa-wrench"></i> CAMBIATA MAPPA LOS SANTOS </li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTO AUTO LAVAGGIO </li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTE SFUMATURE CAPELLI </li>
+                    <li><i class="fas fa-wrench"></i>AGGIUNTA POSSIBILITA' DI MUOVERE LA VISUALE DA MORTO </li>
+                    <li><i class="fas fa-wrench"></i>AGGIUNTO NUOVO DLC "LOS SANTOS TUNER" </li>       
+                    <li><i class="fas fa-wrench"></i>AGGIUNTA ULTERIORE PROTEZIONE CONTRO I MODDER </li>
+                    <li><i class="fas fa-wrench"></i>FIXATO BUG MASCHERE </li>
+                    <li><i class="fas fa-wrench"></i>FIXATI FURTI IN CASA </li>
+                    <li><i class="fas fa-wrench"></i>FIXATI "PROP INCASTRATI NELLE MANI" </li>
+                    <li><i class="fas fa-wrench"></i>FIXATI BUG INVENTARIO </li>
+                    <li><i class="fas fa-wrench"></i>FIXATO BUG DEI DROP </li>
+                    <li><i class="fas fa-wrench"></i>RIMOSSO SCERIFFATO </li>
+                    <li><i class="fas fa-wrench"></i>ABBASSATO SUONO SUPRA </li>
+                    <li><i class="fas fa-wrench"></i>AGGIUNTA POSSIBILITA' DI CREARE DOCUMENTI FALSI </li>
+                    <li><i class="fas fa-wrench"></i>REWORKATI LAVORI NO-WHITELIST </li>
+                    <li><i class="fas fa-wrench"></i>DIMINUITA PROBABILITA' DI CADERE QUANDO SI BUNNYHOPPA </li>
+                    <li><i class="fas fa-wrench"></i>RIMOSSA POSSIBILITA' DI UTILIZZARE /BRACCIO NEI PRESSI DELLO SPAWN </li>
+                    <li><i class="fas fa-wrench"></i>FIXATI TEXTURE LOSS </li>
+                    <li><i class="fas fa-wrench"></i>RIMOSSA POSSIBILITA' AI PED DI APRIRE IL FUOCO </li>
+                    <li><i class="fas fa-wrench"></i>AGGIUNTA OFFICINA "RAZE CUSTOM" </li>
+                    <li><i class="fas fa-wrench"></i>OTTIMIZZATO LEMON_CUSTOM 0.01 MS </li>
+                    <li><i class="fas fa-wrench"></i>OTTIMIZZATO KRZ_PERSONALMENU 0.01 MS </li>
+                    <li><i class="fas fa-wrench"></i>OTTIMIZZATO LEMON_CUSTOM_2 0.01 MS </li>
+                    <li><i class="fas fa-wrench"></i>OTTIMIZZAZIONE GENERALE DEL SERVER </li>
+                    <li><i class="fas fa-wrench"></i>FIX VARI </li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>	
+        </section>
+	  
+	    <section id="pricing" class="pricing section-bg" data-aos="fade-up">
+          <div class="container">
+            <div class="row gy-3">
+            
+              <div class="col-lg-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="box">
+                  <h3>CHANGELOG DEL 02/08/2021</h3>
+                  <ul>
+                    <li><i class="fas fa-wrench"></i> AGGIORNATA VERSIONE SALTYCHAT </li>
+                    <li><i class="fas fa-wrench"></i> QUANDO USCITE NON SENTIRETE PIU TUTTE LE VOCI </li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTO NUOVO MENU EMOTE F3 </li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTO PLACCAGGIO PER LA POLIZIA</li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTO /GPS CIVICO [VI SETTA IL GPS SUL CIVICO]</li>
+                    <li><i class="fas fa-wrench"></i> FIXATO BUG "PROP" ATTACCATI SULLE MANI</li>
+                    <li><i class="fas fa-wrench"></i> NUOVO STILE NOTIFICHE</li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTI DOORLOCK MANCANTI AI VARI LOCALI </li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTI /ME APPENA ARRIVATO QUANDO SI ENTRA </li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTA INTERFACCIA GRAFICA ALLE BANCHE</li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTA MAPPA TEQUILA </li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTE AUTO AL CONCESSIONARIO</li>
+                    <li><i class="fas fa-wrench"></i> RIMOSSA ISOLA MILITARE</li>
+                    <li><i class="fas fa-wrench"></i> REWORKATO DATABASE DELLA POLIZIA </li>
+                    <li><i class="fas fa-wrench"></i> I VEICOLI NON TORNERANNO AL GARAGE DOPO IL RIAVVIO</li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTO DISSEQUESTRO AUTOMATICO</li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTA RIMOZIONE FORZATA</li>
+                    <li><i class="fas fa-wrench"></i> CAMBIATO STILE F10</li>
+                    <li><i class="fas fa-wrench"></i> AGGIUNTE MODIFICHE ALLE AUTO </li>
+                    <li><i class="fas fa-wrench"></i> SPOSTATO IL MC DONALD'S AL CIVICO 567</li>
+                    <li><i class="fas fa-wrench"></i> FIXATO DEPOSITO GARAGE</li>
+                    <li><i class="fas fa-wrench"></i> FIX VARI</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+	  
+  </main><!-- End #main -->
+
+ <!-- ======= Footer ======= -->
+  <footer id="footer" class="metti-giu">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h3><strong>LEMONCITY</strong></h3>
+            <br>
+            <p>Progetto Creato e Sviluppato da SteCk_ & ShamZy.<br>
+            Si ringrazia l'intero corpo staff per la fiducia e l'impegno</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h4>Link Utili</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://lemoncityrp.it/staff">Staff</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="tos.html">Termini di Servizio</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="database.html" target="_blank">Database Vari</a></li>
+            </ul>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="copyright-wrap d-md-flex py-4">
+        <div class="me-md-auto text-center text-md-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>LemonCity</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            Developed by SteCk_ & ShamZy
+          </div>
+        </div>
+        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+          <a href="https://discord.com/invite/lemoncityrp" target="_blank" class="twitter"><i class="fab fa-discord"></i></a>
+          <a href="https://www.instagram.com/lemoncityrp_/" target="_blank" class="facebook"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitch.tv/lemoncity_rp" target="_blank" class="instagram"><i class="fab fa-twitch"></i></a>
+          <a href="https://www.youtube.com/channel/UCzcYQU59Ub0rWRpJiH61GHQ" target="_blank" class="google-plus"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.tiktok.com/@lemoncityrp_" target="_blank" class="linkedin"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+
+
+<!-- Mirrored from www.lemoncityrp.it/changelog by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Mar 2023 23:23:31 GMT -->
+</html>
